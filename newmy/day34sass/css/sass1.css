@@ -1,0 +1,20 @@
+.box {
+  height: 100px;
+  background-color: pink;
+  border: 300px;
+}
+.box a {
+  text-decoration: none;
+  display: block;
+  text-decoration: none;
+}
+
+ul {
+  border: green 2px dashed;
+}
+
+ol {
+  border: red 3px solid;
+}
+
+/*# sourceMappingURL=sass1.css.map */

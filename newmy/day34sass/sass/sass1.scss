@@ -1,0 +1,70 @@
+    @charset "utf-8"; //设置中文字符
+    $w:300px;
+    $h:100px;
+    $c:pink;
+    $t:text-decoration;
+    $n:none;
+    $b:1px solid;
+    .box {
+        height: $h;
+        background-color: $c;
+        border: $w;
+        a {
+            #{$t}: $n; //普通变量只能作为属性值使用,不能作为属性名;变量做为属性名或者其他的特殊情况,必须使用#{$xxx}的形式进行调用
+            display: block;
+            text-decoration: $n;
+            $t: $n;
+        }
+    }
+    
+    // @for $num from 1 to 10 {
+    //     .box#{$num} {
+    //         border: $num*2;
+    //     }
+    // }
+    // .a {
+    //     background-color: $c;
+    //     width: 500px;
+    //     ul {
+    //         border: $b;
+    //         background-color: blue;
+    //         li {
+    //             text-align: center;
+    //             list-style: $n;
+    //         }
+    //         span {
+    //             background-color: #abcdab;
+    //         }
+    //     }
+    //     ol {
+    //         background-color: red;
+    //         border: $b;
+    //         font-size: 12px;
+    //         li {
+    //             list-style: $n;
+    //             color: $c;
+    //             font-size: 20px;
+    //             a {
+    //                 #{$t}: $n;
+    //                 color: greenyellow;
+    //                 &:hover {
+    //                     background-color: orange;
+    //                 }
+    //             }
+    //             em {
+    //                 font-size: 26px;
+    //             }
+    //         }
+    //     }
+    // }
+    @mixin borderstyle($color:red, $size:3px, $style:solid) {
+        border: $color $size $style
+    }
+    
+    ul {
+        @include borderstyle(green, 2px, dashed)
+    }
+    
+    ol {
+        @include borderstyle()
+    }

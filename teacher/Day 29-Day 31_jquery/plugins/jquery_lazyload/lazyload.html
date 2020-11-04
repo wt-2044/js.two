@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" style="height: 1200px; background: #ccc;"></div>
+    <img data-src="https://m.360buyimg.com/babel/jfs/t1/143057/17/1669/138829/5ef804a4E06507701/906f6f640f366c85.jpg" alt="">
+
+    <!-- 引入jquery -->
+    <script src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        //原理：
+        //懒加载核心：操作图片，页面结构进入可视区才加载图片。
+        //懒加载触发完成，触发刷新清缓存，否则不会再次出现此效果，一次性的应用。
+
+        // console.log($('img').offset().top); //1225
+        //如果当前元素的top值>可视区的高度+滚动条的top值，证明当前的元素一定不在可视区内
+        //如果当前元素的top值<=可视区的高度+滚动条的top值，证明当前的元素一定在可视区内,获取自定义属性值，赋值给图片地址
+        // $(window).on('scroll', function() {
+        //     let clientheight = $(window).height(); //可视区的高度
+        //     let scrolltop = $(window).scrollTop(); //滚动条的top值
+        //     let eletop = $('img').offset().top; //元素的top值
+        //     console.log(clientheight, scrolltop, eletop);
+        //     if (eletop <= clientheight + scrolltop) { //
+        //         $('img').attr('src', $('img').attr('data-src')); //赋值
+        //     }
+        // });
+    </script>
+</body>
+
+</html>

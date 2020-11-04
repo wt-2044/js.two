@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <!-- 
+        jquery.cookie.js插件：cookie存取删。
+        jquery.cookie插件依赖于jquery。先引入jquery，再引入jquery.cookie.js插件，应用插件。
+     -->
+    <script>
+        // 1.添加一个"会话cookie",浏览器关闭即消失
+        // $.cookie('the_cookie', 'the_value');
+
+        // 2.创建一个cookie并设置有效时间为 7天 - 没有路径，跨目录访问无法获取
+
+        // $.cookie('name', '刘德华', {
+        //     expires: 7
+        // });
+
+        // 3.创建一个cookie并设置 cookie的有效路径和过期时间
+        // $.cookie('username', 'zhangsan', {
+        //     expires: 7,
+        //     path: '/'
+        // });
+
+        // 4.获取cookie
+        // console.log($.cookie('username'));//zhangsan
+
+
+        //5.删除cookie
+        // $.cookie('username', '', {
+        //     expires: -1,
+        //     path: '/'
+        // });
+    </script>
+</body>
+
+</html>
